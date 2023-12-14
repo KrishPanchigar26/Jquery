@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui.theme.css">
+    <style>
+        /* #div1{
+            height: 300px;
+            width: 300px;
+            border: 3px solid black;
+            border-radius: 25px;
+            position: relative;
+            margin: auto;
+        }
+
+        p{
+            text-align: center;
+            margin-top: 150px;
+            font-weight: bolder;
+        } */
+    </style>
+</head>
+<body>
+    <!-- <h1>jquery UI</h1> -->
+    <!-- <h1>Date Picker Widget</h1> -->
+    <!-- <h1>tooltip Widget</h1> -->
+    <!-- <h1>Accordion Widgt</h1> -->
+    <!-- <h1>Message Box</h1> -->
+    <!-- <h1>Autocomplete</h1> -->
+    <h1>Widget Modification</h1>
+
+    <!-- Datepicker and tooltip -->
+
+    <!-- <div id="div1">
+        <p>Date <input type="text" id="date" placeholder="Enter Date"></p>
+        <p>Name <input type="text" id="tool" title="Enter your name here" placeholder="Enter Name"></p>
+        <p>Name <input type="text" id="tool" title="" placeholder="Enter Name"></p>
+    </div> -->
+
+    <!-- Accordion -->
+
+    <!-- <div id="div1">
+        <h2>HTML</h2>
+        <div>
+            <p>HTML stands for html markup language it is used to stucture web pages and it's content</p>
+        </div>
+        <h2>CSS</h2>
+        <div>
+            <p>CSS stand for casceding style sheet and it is used to style web page in different phase</p>
+        </div>
+        <h2>JavaScript</h2>
+        <div>
+            <p>JavaScript was introduced in the year 1995. It is used to add functionality</p>
+        </div>
+        <h2>JQuery</h2>
+        <div>
+            <p>JQuery was Introduced in 2006. jquery is an open source fast, tny, andrich feature library</p>
+        </div>
+    </div> -->
+
+    <!-- Message Box -->
+
+    <!-- First Name: <input type="text">
+    <button id="btn1">Dialog Box</button>
+    <div id="dialog" title="Title using Attribute">
+        This is a customizable dialogue box
+    </div> -->
+
+    <!-- Autocomplete -->
+
+     <!-- Favorite Language: <input type="text" id="input">
+     <button id="btn1">Submit</button> -->
+
+     <!-- Modification widget -->
+
+     <div id="dialog" title="Title 1">
+        This is a customizable dialog box
+     </div>
+    <button id="btn1">GET</button>
+    <button id="btn2">SET</button>
+
+</body>
+<script src="jquery.js"></script>
+<script src="jquery-ui.js"></script>
+<script>
+
+    //Date picker
+
+    // $("#date").datepicker({
+    //     showOtherMonths: true,
+    //     selectOtherMonths: true,
+    //     showButtonPanel: true,
+    //     changeMonth: true,
+    //     changeYear: true,
+    //     minDate: new Date(2016, 1 , 5),
+    //     maxDate: new Date(2023,1,6),
+    //     numberOfMonths: 2
+    // })
+
+    // tooltip
+
+    // $("#tool").tooltip({
+    //     track: true,
+    //     content: "This is the place for name",
+    //     // show:{effect: "slideDown", duration: 2000, delay: 250}
+    //     // show:{effect: "highlight", duration: 2000, delay: 250}
+    //     show:{effect: "pulsate", duration: 2000, delay: 250},
+    //     hide:{effect: "explode", duration: 2000}
+    // });
+
+    // accordion
+
+    // $('#div1').accordion({
+    //     collapsible: true,
+    //     icons:{
+    //         header: " ui-icon-plus",
+    //         activeHeader: "ui-icon-minusthick"
+    //     },
+    //     anmate: 2000,
+    //     event: "mouseover"
+    // });
+
+    // Dialogue Box
+
+    // $("#btn1").click(function(){
+    //     $("#dialog").dialog("open")
+    // })
+
+    // $("#dialog").dialog({
+    //     title: "Title Using Property",
+    //     draggable: false,
+    //     resizeable: false,
+    //     closeOnEscape: false,
+    //     modal: true, // this is used to disable input until dialog box is closed
+    //     autoOpen: false
+    // })
+
+    //Autocomplete
+
+    // var language = ["HTML", "CSS", "PHP", "Java", "Python", "C++", "C#", "Ruby", "Scala", "COBOL", "Basic","Fortran","lisp","TypeScript"]
+
+    // $("#input").autocomplete({
+    //     source: language
+    // },{
+    //     delay: 500,
+    //     minLength: 3,
+    //     autoFocus: true,
+    // })
+
+    // Widget Modification
+
+    $("#dialog").dialog({
+        draggable: true,
+        resizable: true,
+        closeOnEscape: true,
+        modal: false,
+        autoOpen: true,
+        height: 250,
+        weight: 250
+    })
+
+    $('#btn1').click(function(){
+        // alert("GET is Working")
+        var modal = $("#dialog").dialog("option","modal")
+        alert(modal)
+    })
+    $('#btn2').click(function(){
+        // alert("SET is Working")
+        $("#dialog").dialog("option","modal", true)
+    })
+
+</script>
+</html>
