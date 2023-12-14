@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img {
+            height: 250px;
+            width: 250px;
+            opacity: 0.4;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Effects in jquery</h1>
+    <button id="btn1">Hide</button>
+    <button id="btn2">Show</button>
+    <button id="btn3">Toggle</button>
+    <br>
+    <br>
+    <button id="btn4">Fade-in</button>
+    <button id="btn5">Fade-out</button>
+    <button id="btn6">Fade-Toggle</button>
+    <br>
+    <br>
+    <button id="btn7">Slide Up</button>
+    <button id="btn8">Slide Down</button>
+    <button id="btn9">Slide-Toggle</button>
+    <br>
+    <br>
+    <button id="btn10">Stop</button>
+    <br>
+    <br>
+    <button id="btn11">Animate</button>
+    <div>
+    <img id="img" src="1.png">
+    </div>
+</body>
+<script src="jquery.js"></script>
+<script>
+
+    $("#btn1").click(function(){
+        $('#img').hide(2000)
+    })
+
+    $("#btn2").click(function(){
+        $('#img').show(2000)
+    })
+
+    $("#btn3").click(function(){
+        $('#img').toggle(3000)
+    })
+
+    $("#btn4").click(function(){
+        $('#img').fadeIn(2000)
+    })
+
+    $("#btn5").click(function(){
+        $('#img').fadeOut(2000)
+    })
+
+    $("#btn6").click(function(){
+        $('#img').fadeToggle(3000)
+    })
+
+    $("#btn7").click(function(){
+        $('#img').slideUp(2000)
+    })
+
+    $("#btn8").click(function(){
+        $('#img').slideDown(2000)
+    })
+
+    $("#btn9").click(function(){
+        $('#img').slideToggle(3000)
+    })
+
+    $("#btn10").click(function(){
+        $('#img').stop(3000)
+    })
+
+    $("#btn11").click(function(){
+        $("#img").animate({
+            left: '150px',
+            opacity: '1',
+            height: '400px',
+            width: '400px'
+        }, 'slow')
+    })
+    </script>
+</html>
