@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            height: 250px;
+            width: 250px;
+            border: 5px solid black;
+            /* margin: 50px;
+            font-size: xx-large;
+            font-weight: bold; */
+        }
+
+        .p1 {
+            text-align: center;
+            /* margin-top: 100px; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM in jquery</h1>
+    <h2>Click on Button Below</h2>
+    <span id="span1"></span>
+    <div class="div1" style="background-color: aquamarine;">
+    <p id="idp1" class="p1">This is <i>Box 1</i></p>
+    </div>
+    <br>
+    <button id="btn1">Appends</button>
+    <button id="btn2">Prepend</button>
+    <button id="btn3">Before</button>
+    <button id="btn4">After</button>
+    <button id="btn5">Remove</button>
+    <button id="btn6">Empty</button>
+</body>
+
+<script src="jquery"></script>
+<script>
+    console.log("hello");
+    // $('.div1').click(function(){
+    //     var x = $("#p1").html();
+    //     $('#span1').text(x)
+    // })
+    // $('.div1').click(function(){
+    //     alert($("#p1").text());
+    // })
+    // $('#btn1').click(function(){
+    //     $(".p1").attr("id","p2id")
+    // })
+
+    // $('.p1').click(function(){
+    //     alert($(".p1").attr('id'));
+    // })
+
+    // $('.div1').click(function(){
+    //     alert($(".div1").css("background-color"))
+    // })
+    // $('#btn1').click(function(){
+    //     $(".div1").css("background-color", "green")
+    // })
+
+    // $('#btn1').click(function(){
+    //     $(".div1").append("<p>This is Paragraph 2</p>")
+    // })
+
+    $('#btn1').click(function(){
+        $(".div1").append('<img src="1.png" height="100px" width="100px">') // this img method only work in single corts
+    })
+
+    $('#btn2').click(function(){
+        $(".div1").prepend("<p>This is Paragraph 2</p>")
+    })
+
+    $('#btn3').click(function(){
+        $('.div1').before("<p>This is Paragraph 3</p>")
+    })
+
+    $('#btn4').click(function(){
+        $('.div1').after("<p>This is Paragraph 4</p>")
+    })
+    
+    $('#btn5').click(function(){
+        $('.div1').remove()
+    })
+    
+    $('#btn6').click(function(){
+        $('.div1').empty()
+    })
+
+</script>
+</html>
