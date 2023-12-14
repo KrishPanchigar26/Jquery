@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img {
+            height: 250px;
+            width: 250px;
+            opacity: 0.4;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jquery CallBack Functions</h1>
+    <button id="btn">Animated</button>
+    <br>
+    <br>
+    <img src="1.png" id="img">
+    <script src="jquery.js"></script>
+
+
+
+    <script>
+        // syntax $("#img").animate({}, 2000, function() {})
+
+        $("#btn").click(function(){
+        $("#img").animate({
+            left: '150px',
+            opacity: '1',
+            height: '400px',
+            width: '400px'
+        }, 'slow', function(){
+            alert("Animated")
+        })    
+    })
+
+    // callback
+
+        $("#btn").click(function(){ 
+            $("#img").slideUp(2000, function(){
+                $("#img").slideDown(2000)
+            })
+        })
+
+        // chaining
+
+        $("#btn").click(function(){
+            $("#img").slideUp(2000).slideDown(3000)
+        })
+    </script>
+
+</body>
+</html>
