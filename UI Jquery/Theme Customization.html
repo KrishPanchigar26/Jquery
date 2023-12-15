@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery-ui-slice/jquery-ui-1.13.2.custom/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-slice/jquery-ui-1.13.2.custom/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-slice/jquery-ui-1.13.2.custom/jquery-ui.theme.css">
+</head>
+<body>
+    <h1>Theme Customization</h1>
+    <div id="date"></div>
+    <div id="dialog" title="Title1">
+        This is a Customzable dialog box
+    </div>
+</body>
+<script src="jquery.js"></script>
+<script src="jquery-ui.js"></script>
+<script>
+    $("#dialog").dialog({
+        draggable: true,
+        resizable: true,
+        closeOnEscape: true,
+        modal: false,
+        autoOpen: true,
+    })
+
+    $("#date").datepicker({
+        showOtherMonths: true,
+        chageMonth: true,
+        changeYear:true
+    })
+</script>
+</html>
