@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui.theme.css">
+    <style>
+        /* Draggable Interaction */
+
+        .box {
+            border: 5px solid black;
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* Sorting Interaction */
+
+        #sortable{
+            border: 2px solid black;
+            height: 20px;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* Resizable Interaction */
+
+        #img {
+            height: 250px;
+            width: 250px;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Draggeable Interaction -->
+
+    <h1>Draggable Interaction in JQuery</h1>
+    <div>
+        <div class="box">
+            Box1
+        </div>
+        <div class="box">
+            Box2
+        </div>
+    </div>
+
+    <!-- Sorting Interaction -->
+
+    <h1>Sortable Interaction</h1>
+
+    <ul class="sort">
+        <li id="sortable">Item1</li>
+        <li id="sortable">Item2</li>
+        <li id="sortable">Item3</li>
+        <li id="sortable">Item4</li>
+        <li id="sortable">Item5</li>
+        <li id="sortable">Item6</li>
+        <li id="sortable">Item7</li>
+    </ul>
+
+    <!-- Resizable Interaction -->
+
+    <h1>Resizable Interaction</h1>
+    <img src="1.png" id="img" alt="JQuery">
+
+</body>
+<script src="jquery.js"></script>
+<script src="jquery-ui.js"></script>
+<script>
+
+    // Draggable Interaction
+
+    $(".box").draggable({
+        axis: "x",
+        cursor: "grabbing",
+        opacity: 0.7,
+        containment: "parent",
+        grid: [300,300],
+        snap: true,
+        snapTolerance: 100  
+    });
+
+    // Sortable Interaction
+
+    $(".sort").sortable({
+        opacity: 0.4,
+        cursor: "grabbing",
+        containment: "parent",
+        delay:300,
+        distance: 100
+    })
+
+    // Resizable Interaction
+
+    $("#img").resizable({
+        animate: true,
+        containment: "parent",
+        maxHeight: 400,
+        maxWidth: 400,
+        minHeight: 150,
+        minWidth: 150,
+        ghost: true,
+        aspectRation: true
+    })
+
+</script>
+</html>
